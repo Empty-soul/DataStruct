@@ -18,3 +18,8 @@ Status Pop(SqStack *s,ElemTpye *e);//出栈，用e接收栈顶元素
 ElemTpye GetTop(SqStack const* s);//返回栈顶元素
 void DecToOct(int dec);//十进制转八进制输出
 Status Matching(const char *str);//括号字符串匹配，若无问题返回0，否则返回1
+int In(char ch);
+char Orecede(char a, char b);
+ElemTpye Oreate(ElemTpye a, ElemTpye theta, ElemTpye b);
+char EvaluateExpression();
+int IsPlaindrome(char str[], int num);

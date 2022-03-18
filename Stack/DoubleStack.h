@@ -14,6 +14,9 @@ typedef struct {
 }DblStack;
 
 Status InitDblStack(DblStack* dbs);
+int DblStackZEmpty(DblStack dbs);//若栈0为空则返回true，否则返回false
+int DblStackFEmpty(DblStack dbs);//若栈1为空则返回true，否则返回false
 int DblStackEmpty(DblStack dbs);
+
 int DblStackFull(DblStack const *dbs);
 Status InsertDblStack(DblStack* dbs,ElemType e);

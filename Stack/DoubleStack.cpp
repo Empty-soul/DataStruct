@@ -11,17 +11,31 @@ Status InitDblStack(DblStack* dbs)
 	return OK;
 }
 
+int DblStackZEmpty(DblStack dbs)
+{
+	int flag = 1;
+	if (dbs.top[0] != -1) flag = 0;
+	return flag;
+}
+
+int DblStackFEmpty(DblStack dbs)
+{
+	int flag = 1;
+	if (dbs.top[1] != dbs.m) flag = 0;
+	return flag;
+}
+
 int DblStackEmpty(DblStack dbs)
 {
 	int flag = 0;
-	if (dbs.top[0] == dbs.V[-1] && dbs.top[1] == dbs.V[dbs.m]) flag = 1;
+	if (DblStackZEmpty(dbs) && DblStackFEmpty(dbs))flag=1;
 	return flag;
 }
 
 int DblStackFull(DblStack const *dbs)
 {
 	int flag = 0;
-	if (dbs->top[0] + 1 == dbs->top[1] && dbs->top[1] == -1 || dbs->top[0] == dbs->m) flag = 1;
+	if (dbs->top[0] + 1 == dbs->top[1] && dbs->top[1] == -1 || dbs->top[0] == dbs->m) return ERROR;
 	if (dbs->top[0] + 1 == dbs->top[1] && dbs->top[1] != -1 && dbs->top[0] != dbs->m) flag = 1;
 	return flag;
 }
@@ -34,3 +48,4 @@ Status InsertDblStack(DblStack* dbs, ElemType e)
 	else dbs->V[--(dbs->top[1])] = e;
 	return OK;
 }
+
