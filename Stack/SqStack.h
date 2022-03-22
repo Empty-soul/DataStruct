@@ -23,3 +23,7 @@ char Orecede(char a, char b);
 ElemTpye Oreate(ElemTpye a, ElemTpye theta, ElemTpye b);
 char EvaluateExpression();
 int IsPlaindrome(char str[], int num);
+
+int SqStackEmpty(SqStack const* sq);//若栈空，则返回1，否则返回0
+int SqStackFull(SqStack const* sq);//若栈满，则返回1，否则返回0
+void IOByStack();//从键盘读入一整数序列，当为-1时，出栈；当不为-1时，入栈
