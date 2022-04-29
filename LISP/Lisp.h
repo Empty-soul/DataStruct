@@ -10,4 +10,6 @@ typedef struct GLNode {
 			struct GLNode* hp, * tp;
 		}ptr;//ptr是表结点的指针域，ptr.hp和ptr.tp分别指向表头和表尾
 	};
-}*GList;
+}*GList;//广义表类型
+
+
